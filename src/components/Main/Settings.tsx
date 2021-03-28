@@ -45,9 +45,7 @@ export const Settings: React.FC<{}> = (): ReactElement => {
     } = useSettings();
 
     return (
-        <>
             <section className={classes.settings}>
-
                 <Card className={classes.card}>
                     <Title title='Settings' marginBottom={0}/>
                     <div className={classes.typographyBlock}>
@@ -58,8 +56,6 @@ export const Settings: React.FC<{}> = (): ReactElement => {
                             {`${size} x ${size}`}
                         </Typography>
                     </div>
-
-
                     <Slider
                         defaultValue={size}
                         aria-labelledby="discrete-slider"
@@ -73,7 +69,6 @@ export const Settings: React.FC<{}> = (): ReactElement => {
                     />
                 </Card>
             </section>
-        </>
     );
 };
 

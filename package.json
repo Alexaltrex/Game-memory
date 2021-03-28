@@ -9,7 +9,7 @@
     "build": "webpack --progress --mode=production",
     "start": "webpack s --config ./webpack.config.js --mode=development",
     "start:prod": "npm run build && http-server dist -p 9999 -o",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "author": {
     "name": "Alexander Vodovozov",

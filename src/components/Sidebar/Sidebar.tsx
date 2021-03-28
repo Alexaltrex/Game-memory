@@ -10,7 +10,7 @@ import {getLang} from "../../store/selectors/app-selectors";
 import {Lang} from "../../utils/lang";
 import {createStyles} from "@material-ui/styles";
 import {SidebarItem} from "./SidebarItem";
-
+import {sidebarWidth} from "../../utils/consts";
 
 //======================== CUSTOM HOOK =========================
 const useSidebar = () => {
@@ -67,7 +67,7 @@ export const Sidebar: React.FC = () => {
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         sidebar: {
-            flex: '0 0 200px',
+            flex: `0 0 ${sidebarWidth}px`,
             backgroundColor: theme.palette.primary.main,
             height: '100%',
             paddingTop: 0,

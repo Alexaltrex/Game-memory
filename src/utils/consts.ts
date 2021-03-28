@@ -1,4 +1,5 @@
 export const headerHeight = 50;
+export const sidebarWidth = 150;
 export const sizeMin = 4;
 export const sizeMax = 8;
 export const stepTime = 5;

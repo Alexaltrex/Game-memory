@@ -3,28 +3,24 @@ import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 //import {Theme} from "@material-ui/core";
 import {createStyles} from "@material-ui/styles";
-import {Title} from "../common/Title";
+import {Title} from "../../common/Title";
 import Card from "@material-ui/core/Card/Card";
 import {useSelector} from "react-redux";
-import {getLang} from "../../store/selectors/app-selectors";
-import {rulesEng, translate} from "../../utils/lang";
+import {getLang} from "../../../store/selectors/app-selectors";
+import {rulesEng, translate} from "../../../utils/lang";
 import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import {RulesItem} from "./RulesItem";
 
 //============= CUSTOM HOOK =============
 const useRules = () => {
     const classes = useStyles();
     const lang = useSelector(getLang);
-    const rulesElements = rulesEng.map((rule, i) => (
-            <ListItem>
-                <ListItemIcon>
-                    <FiberManualRecordIcon color='secondary' />
-                </ListItemIcon>
-                <ListItemText primary={translate(lang, rulesEng[i])} />
-            </ListItem>
+    //primary={translate(lang, rulesEng[i])}
+    const rulesElements = rulesEng.map(
+        (rule, i) => (
+            <RulesItem primary={translate(lang, rulesEng[i])}
+                       key={i}
+            />
         )
     )
 
@@ -40,17 +36,15 @@ export const Rules: React.FC<{}> = (): ReactElement => {
     } = useRules();
 
     return (
-        <>
-            <section className={classes.rules}>
-                <Card className={classes.card}>
-                    <Title title='Rules' marginBottom={0}/>
-                    <List>
-                        {rulesElements}
-                    </List>
+        <section className={classes.rules}>
+            <Card className={classes.card}>
+                <Title title='Rules' marginBottom={0}/>
+                <div className={classes.list}>
+                    {rulesElements}
+                </div>
 
-                </Card>
-            </section>
-        </>
+            </Card>
+        </section>
     );
 };
 
@@ -69,5 +63,14 @@ const useStyles = makeStyles((
             padding: 10,
             boxSizing: 'border-box',
             minHeight: '100%',
+            position: 'relative'
+        },
+        list: {
+            padding: 10
+        },
+        icon: {
+            minWidth: 'inherit',
+            color: 'white',
+            marginRight: 10
         },
     }));

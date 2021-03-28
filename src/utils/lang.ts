@@ -1,14 +1,14 @@
 import {LangType} from "../types/type";
 
 export const rulesEng = [
-    'The field size NxN contains NxN/2 paired cards with different icons arranged in random order',
-    'When you press the card, it opens, within 5 seconds the player needs to open the second card, if the icons on the pair of open cards match they are deleted, if not - the pair of open cards close',
-    'The game ends when all card pairs are found'
+    'The field size NxN contains NxN/2 paired cards with different icons arranged in random order.',
+    'When you press the card, it opens, within 5 seconds the player needs to open the second card, if the icons on the pair of open cards match they are deleted, if not - the pair of open cards close.',
+    'The game ends when all card pairs are found.'
 ];
 export const rulesRus = [
-    'Поле размером NхN содержит NхN/2 парных карточек с различными иконками, расположенными в случайном порядке',
-    'По нажатию на карточку она открывается, в течении 5 сек игроку нужно открыть вторую карточку, если иконки на паре открытых карт совпадают они удаляются, если нет - пара открытых карт закрываются',
-    'Игра заканчивается когда все пары карт найдены'
+    'Поле размером NхN содержит NхN/2 парных карточек с различными иконками, расположенными в случайном порядке.',
+    'По нажатию на карточку она открывается, в течении 5 сек игроку нужно открыть вторую карточку, если иконки на паре открытых карт совпадают они удаляются, если нет - пара открытых карт закрываются.',
+    'Игра заканчивается когда все пары карт найдены.'
 ];
 
 export const Lang: LangObjectType = {
@@ -79,7 +79,35 @@ export const Lang: LangObjectType = {
     [rulesEng[2]]: {
         'eng': rulesEng[2],
         'rus': rulesRus[2]
-    }
+    },
+    'By order': {
+        'eng': 'By order',
+        'rus': 'По порядку'
+    },
+    'By time': {
+        'eng': 'By time',
+        'rus': 'По времени'
+    },
+    'By size': {
+        'eng': 'By size',
+        'rus': 'По размеру поля'
+    },
+    'By count of opened cards': {
+        'eng': 'By count of opened cards',
+        'rus': 'По количеству открытых карт'
+    },
+    'By increment': {
+        'eng': 'By increment',
+        'rus': 'По возрастанию'
+    },
+    'By decrement': {
+        'eng': 'By decrement',
+        'rus': 'По убыванию'
+    },
+    'Clear statistic': {
+        'eng': 'Clear statistic',
+        'rus': 'Удалить статистику'
+    },
 };
 
 // const lang = useSelector(getLang);

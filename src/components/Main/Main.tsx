@@ -4,7 +4,7 @@ import {Switch, Route} from 'react-router-dom';
 //import {Theme} from "@material-ui/core";
 import createStyles from "@material-ui/styles/createStyles/createStyles";
 import {Game} from "./Game/Game";
-import {Rules} from "./Rules";
+import {Rules} from "./Rules/Rules";
 import {Settings} from "./Settings";
 import {Statistic} from "./Statistic/Statistic";
 import {PageNotFound} from "../common/PageNotFound";

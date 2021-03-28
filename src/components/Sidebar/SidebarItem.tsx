@@ -19,13 +19,6 @@ const useSidebarItem = (ownIndex: number) => {
     const dispatch = useDispatch();
     const onClickHandler = () => {
         dispatch(appAC.setSidebarItem(ownIndex));// установить номер текущего элемнта бокового меню
-        // dispatch(profileAC.setEditMode(false)); // выключить режим редактирования профиля
-        // dispatch(usersAC.setShowUsersFrom('all')); // показывать всех пользователей (обнуления поиска)
-        // dispatch(usersAC.setCurrentPage(1)); // установить текущую страницу пользователей - первую
-        // dispatch(usersAC.setSearchFriendsParams({term: ''})); // обнуления параметров поиска друзей
-        // dispatch(usersAC.setCurrentFriendsSidebarItem(0)); // переключение на первый элмемент бокового меню
-        // dispatch(usersAC.setValueFromHeaderSearch('')); // обнуление строки поиска пользователей из заголовка
-        // dispatch(usersAC.setSearchUsersParams({term: '', friend: 'all'})); // сброс параметра поиска пользователей
     };
     const selected = ownIndex === sidebarItem;
     return {

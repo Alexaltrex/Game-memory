@@ -3,10 +3,10 @@ import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {Theme} from "@material-ui/core";
 import {createStyles} from "@material-ui/styles";
-import {Title} from "../../common/Title";
 import Card from "@material-ui/core/Card/Card";
 import {HeaderOfTable} from "./HeaderOfTable";
 import {StatisticItems} from "./StatisticItems";
+import {StatisticTitle} from "./StatisticTitle";
 
 //============= CUSTOM HOOK =============
 const useStatistic = () => {
@@ -27,7 +27,7 @@ export const Statistic: React.FC<{}> = (): ReactElement => {
         <>
             <section className={classes.statistic}>
                 <Card className={classes.card}>
-                    <Title title='Statistic' marginBottom={0}/>
+                    <StatisticTitle title='Statistic' marginBottom={0}/>
                     <HeaderOfTable/>
                     <StatisticItems/>
                 </Card>

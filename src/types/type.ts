@@ -26,3 +26,5 @@ export type AlertType = {
     message: string
     severity: Color
 }
+export type SortValueType = 'increment' | 'decrement';
+export type SortModeType = 'id' | 'secs' | 'size' | 'clickCount';
